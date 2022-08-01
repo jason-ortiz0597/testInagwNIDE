@@ -16,6 +16,11 @@ const productSchema = mongoose.Schema({
         type: Number,
         default: 0
     },
+    
+    image: {
+        public_id: String,
+        secure_url: String
+    }
 })
 
 export default mongoose.model("Product", productSchema);
