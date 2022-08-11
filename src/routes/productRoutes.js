@@ -8,7 +8,7 @@ const router = Router();
 
 router.get('/listProduct', listProduct);
 
-router.post('/createProduct', fileUpload({ useTempFiles: true, tempFileDir: './tmp' }), createProduct);
+router.post('/createProduct', fileUpload({ useTempFiles: true, tempFileDir: './tmp'}), createProduct);
 
 router.put('/updateProduct/:id', updateProduct);
 
@@ -16,3 +16,4 @@ router.delete('/deleteProduct/:id', deleteProduct);
 
 
 export default router;
+

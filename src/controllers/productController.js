@@ -28,7 +28,7 @@ export const createProduct = async (req, res) => {
                 public_id: image.public_id,
                 secure_url: image.secure_url
             }
-            await fs.unlinkSync(req.files.image.tempFilePath);
+            fs.unlinkSync(req.files.image.tempFilePath);
         }
         await product.save();
         res.json({ message: "Product created successfully" });
@@ -50,8 +50,10 @@ export const deleteProduct = async (req, res) => {
         }
         if (product.image.public_id) {
             await deleteImage(product.image.public_id);
+           
+           
         }
-
+       
 
         res.json({ message: "Product deleted successfully" });
     } catch (error) {
