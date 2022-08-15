@@ -5,6 +5,7 @@ import productRoute from './routes/productRoutes.js';
 import customerRoute from './routes/customerRoutes.js';
 
 
+
 import cors from 'cors';
 
 
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(indexRoute);
 app.use(productRoute);
 app.use(customerRoute);
+
 
 
 export default app;

@@ -1,8 +1,6 @@
 import Customer from "../models/customerModel.js";
 
 
-
-
 export const listCustomer = async (req, res) => {
     try {
         const customers = await Customer.find();
@@ -57,4 +55,5 @@ export const deleteCustomer = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
+    
 }

@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 
 const productSchema = mongoose.Schema({
+    
     name: {
         
         type: String,
@@ -9,11 +10,13 @@ const productSchema = mongoose.Schema({
         unique: true,
         trim: true
     },
+
     description: {
 
         type: String,
         trim: true
     },
+
     price: {
 
         type: Number,
@@ -25,6 +28,7 @@ const productSchema = mongoose.Schema({
         public_id: String,
         secure_url: String
     }
+
 })
 
 export default mongoose.model("Product", productSchema);
